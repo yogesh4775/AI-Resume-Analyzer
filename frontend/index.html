@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI Resume Analyzer</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- ================= HEADER ================= -->
+
+        <header>
+
+            <h1>AI Resume Analyzer</h1>
+
+            <p>
+                Upload your resume and get instant AI-powered insights.
+            </p>
+
+        </header>
+
+
+        <main>
+
+
+            <!-- ================= UPLOAD RESUME ================= -->
+
+            <section class="upload-card">
+
+                <h2>
+                    Analyze Your Resume
+                </h2>
+
+
+                <p class="description">
+                    Upload your PDF resume to check your resume score,
+                    technical skills, job role matches and improvement
+                    suggestions.
+                </p>
+
+
+                <div class="upload-area">
+
+                    <div class="upload-icon">
+                        📄
+                    </div>
+
+
+                    <label
+                        for="resumeFile"
+                        class="file-label"
+                    >
+                        Choose PDF Resume
+                    </label>
+
+
+                    <input
+                        type="file"
+                        id="resumeFile"
+                        accept=".pdf,application/pdf"
+                    >
+
+
+                    <p id="fileName">
+                        No file selected
+                    </p>
+
+                </div>
+
+
+                <button
+                    id="analyzeBtn"
+                    type="button"
+                >
+                    Analyze Resume
+                </button>
+
+
+                <p id="status"></p>
+
+            </section>
+
+
+
+            <!-- ================= JOB MATCH ================= -->
+
+            <section class="job-match-card">
+
+                <h2>
+                    🎯 Match Resume With Job
+                </h2>
+
+
+                <p class="description">
+                    Enter a job description to check how well your resume
+                    matches the required skills and role.
+                </p>
+
+
+                <label for="jobDescription">
+                    Job Description
+                </label>
+
+
+                <textarea
+                    id="jobDescription"
+                    placeholder="Paste the job description here..."
+                ></textarea>
+
+
+                <button
+                    id="matchJobBtn"
+                    type="button"
+                >
+                    Match With Job
+                </button>
+
+
+                <div id="jobMatchResult"></div>
+
+            </section>
+
+
+
+            <!-- ================= RESULTS ================= -->
+
+            <section
+                id="results"
+                class="results"
+            >
+
+                <h2>
+                    Resume Analysis
+                </h2>
+
+
+
+                <!-- SCORE + WORD COUNT -->
+
+                <div class="stats">
+
+
+                    <div class="stat-card">
+
+                        <h3>
+                            Resume Score
+                        </h3>
+
+
+                        <div
+                            id="score"
+                            class="stat-number"
+                        >
+                            0
+                        </div>
+
+
+                        <span>
+                            / 100
+                        </span>
+
+                    </div>
+
+
+
+                    <div class="stat-card">
+
+                        <h3>
+                            Word Count
+                        </h3>
+
+
+                        <div
+                            id="wordCount"
+                            class="stat-number"
+                        >
+                            0
+                        </div>
+
+
+                        <span>
+                            words
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ================= SKILLS ================= -->
+
+                <div class="result-card">
+
+                    <h3>
+                        🛠️ Detected Technical Skills
+                    </h3>
+
+
+                    <div
+                        id="skills"
+                        class="skills-container"
+                    >
+
+                        <p>
+                            No skills detected yet.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ================= JOB ROLES ================= -->
+
+                <div class="result-card">
+
+                    <h3>
+                        💼 Job Role Matches
+                    </h3>
+
+
+                    <div id="jobRoles">
+
+                        <p>
+                            No job roles available yet.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ================= SUGGESTIONS ================= -->
+
+                <div class="result-card">
+
+                    <h3>
+                        💡 Resume Improvement Suggestions
+                    </h3>
+
+
+                    <ul id="suggestions">
+
+                        <li>
+                            No suggestions available yet.
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </section>
+
+        </main>
+
+
+
+        <!-- ================= FOOTER ================= -->
+
+        <footer>
+
+            <p>
+                AI Resume Analyzer | Built with Python & FastAPI
+            </p>
+
+        </footer>
+
+    </div>
+
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
