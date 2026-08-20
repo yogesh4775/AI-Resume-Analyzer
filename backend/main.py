@@ -54,7 +54,7 @@ app.add_middleware(
 # UPLOAD DIRECTORY
 # ============================================================
 
-UPLOAD_DIR = "../uploads"
+UPLOAD_DIR = "uploads"
 
 os.makedirs(
     UPLOAD_DIR,
