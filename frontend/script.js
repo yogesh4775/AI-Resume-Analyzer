@@ -162,7 +162,7 @@ analyzeBtn.addEventListener(
 
             const response =
                 await fetch(
-                    "http://127.0.0.1:8000/analyze",
+                    "https://ai-resume-analyzer-916v.onrender.com/analyze",
                     {
                         method: "POST",
                         body: formData
@@ -561,7 +561,7 @@ matchJobBtn.addEventListener(
 
             const response =
                 await fetch(
-                    "http://127.0.0.1:8000/match-job",
+                    "https://ai-resume-analyzer-916v.onrender.com/match-job",
                     {
                         method: "POST",
                         body: formData
