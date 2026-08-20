@@ -1,13 +1,54 @@
+# Python cache
 __pycache__/
-*.pyc
+*.py[cod]
+*$py.class
 
+# Virtual environments
 venv/
-.env
+.venv/
+env/
+ENV/
+env.bak/
+venv.bak/
 
+# Environment variables
+.env
+.env.*
+
+# Uploaded resume files
 uploads/*
 !uploads/.gitkeep
 
-.idea/
+# IDE
 .vscode/
+.idea/
 
+# Node
 node_modules/
+
+# Build / distribution
+build/
+dist/
+*.egg-info/
+
+# Testing / coverage
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# PyInstaller
+*.manifest
+*.spec
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temporary Python files
+tempCodeRunnerFile.py
